@@ -19,14 +19,23 @@ export const bannerServices = () => {
 
 // create an export function for creating servicesHTML
 export const Services = () => {
-  let html = "<ul>";
+  let html = `<article class="services">`;
 
   // iterate through the array of services
   for (const service of services) {
-    html += `<li data-type="service" data-id=${service.id} >${service.name}</li>`;
+    html += `
+    <ul>
+        <li data-type="service" 
+        data-id=${service.id} >
+        ${service.name}
+        </li>
+    </ul>
+    `;
   }
 
-  html += "</ul>";
+  html += "</article>";
 
   return html;
 };
+
+// create function to renderToDOM
