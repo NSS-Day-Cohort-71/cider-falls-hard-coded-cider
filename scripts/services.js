@@ -11,7 +11,11 @@ export const bannerServices = () => {
   let html = "Park Services: ";
 
   for (const service of services) {
-    html += `, ${service.name}`;
+    html += `
+    <span data-type="service" data-id=${service.id} data-name=${service.name}>
+    , ${service.name}
+    </span>
+    `;
   }
 
   return html;
