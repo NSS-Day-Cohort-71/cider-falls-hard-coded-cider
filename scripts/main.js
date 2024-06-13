@@ -1,6 +1,6 @@
 import { Areas } from "./areas.js";
-import { Services } from "./areas.js";
-import { Guests } from "./areas.js";
+import { Services } from "./services.js";
+import { Guests } from "./guests.js";
 
 // reminder:: hard-code header & footer
 
