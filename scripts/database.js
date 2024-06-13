@@ -92,3 +92,25 @@ export const database = {
     { id: 18, parkAreaId: 6, serviceId: 10 },
   ],
 };
+
+// create a getFunction using the .map method for guests
+export const getGuests = () => {
+  return database.guests.map((guest) => ({ ...guest }));
+};
+
+// create a getFunction using the .map method for areas
+export const getAreas = () => {
+  return database.areas.map((area) => ({ ...area }));
+};
+
+// create a getFunction using the .map method for services
+export const getServices = () => {
+  return database.services.map((service) => ({ ...service }));
+};
+
+// create a getFunction using the .map method for parkArea_services
+export const getParkAreaServices = () => {
+  return database.parkArea_services.map((parkArea_service) => ({
+    ...parkArea_service,
+  }));
+};
