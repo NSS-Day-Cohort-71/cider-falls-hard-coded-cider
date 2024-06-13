@@ -38,7 +38,3 @@ export const Services = () => {
 
   return html;
 };
-
-// render services to the areas articles
-const servicesContainer = document.querySelector("#services-offered");
-servicesContainer.innerHTML = Services();

@@ -12,7 +12,7 @@ export const AreaHTML = () => {
     // create html portion
     AreaHTML += `
     <h2>${area.name}</h2>
-    <div id="services-offered">
+    <div class="services-offered">
     </div>
     `;
   }
