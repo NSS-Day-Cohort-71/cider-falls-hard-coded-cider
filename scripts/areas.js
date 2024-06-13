@@ -6,18 +6,20 @@ import { getAreas } from "./database.js";
 const areas = getAreas();
 // create an export function for creating AreaHTML
 export const AreaHTML = () => {
-  let AreaHTML = "<ol>";
+  let AreaHTML = "<article>";
   // invoke iterate through the array of objects
   for (const area of areas) {
     // create html portion
     AreaHTML += `
-    <li>
+    <h2>
     ${area.name}
-    </li>
+    <div id="services-offered">
+    </div>
+    </h2>
     `;
   }
 
-  AreaHTML += "</ol>";
+  AreaHTML += "</article>";
   // return html
   return AreaHTML;
 };
