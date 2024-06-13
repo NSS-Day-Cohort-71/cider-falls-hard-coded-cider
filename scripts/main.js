@@ -1,11 +1,16 @@
-// import statements
+import { Areas } from "./areas.js";
+import { Services } from "./areas.js";
+import { Guests } from "./areas.js";
 
 // reminder:: hard-code header & footer
 
-// grab the container element from the DOM and place it into a variable mainContainer
+const mainContainer = document.querySelector("#main-container");
 
-// create function for ApplicationHTML
-
-// invoke the various modules' HTML functions
-
-// invoke the applicationHTML using the mainContainer.innerHTML property
+const ApplicationHTML = () => {
+  return `
+    ${Areas()}
+    ${Services()}
+    ${Guests()}
+    `;
+};
+mainContainer.innerHTML = ApplicationHTML();
