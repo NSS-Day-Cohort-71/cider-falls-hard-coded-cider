@@ -38,4 +38,6 @@ export const Services = () => {
   return html;
 };
 
-// create function to renderToDOM
+// create function that returns the Services HTML to the servicesContainer
+const servicesContainer = document.querySelector("#services-container");
+servicesContainer.innerHTML = Services();
