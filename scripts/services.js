@@ -26,7 +26,8 @@ export const Services = () => {
     html += `
     <ul>
         <li data-type="service" 
-        data-id=${service.id} >
+        data-id=${service.id}
+        data-name=${service.name} >
         ${service.name}
         </li>
     </ul>
@@ -38,4 +39,6 @@ export const Services = () => {
   return html;
 };
 
-// create function to renderToDOM
+// render services to the areas articles
+const servicesContainer = document.querySelector("#services-offered");
+servicesContainer.innerHTML = Services();

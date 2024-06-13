@@ -11,11 +11,9 @@ export const AreaHTML = () => {
   for (const area of areas) {
     // create html portion
     AreaHTML += `
-    <h2>
-    ${area.name}
+    <h2>${area.name}</h2>
     <div id="services-offered">
     </div>
-    </h2>
     `;
   }
 
