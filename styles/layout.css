@@ -1,0 +1,12 @@
+body {
+
+}
+
+main {
+    display: flex;
+}
+
+.left-justified-area {
+    display: flex;
+    flex-direction: column;
+}
