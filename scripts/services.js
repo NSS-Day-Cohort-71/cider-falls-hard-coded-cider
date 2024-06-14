@@ -45,24 +45,3 @@ export const bannerServices = () => {
 
   return html;
 };
-
-// function for creating servicesHTML to be invoked in area.js
-export const Services = () => {
-  let html = `<article class="services">`;
-
-  for (const service of services) {
-    html += `
-    <ul>
-        <li data-type="service" 
-        data-id=${service.id}
-        data-name=${service.name} >
-        ${service.name}
-        </li>
-    </ul>
-    `;
-  }
-
-  html += "</article>";
-
-  return html;
-};
