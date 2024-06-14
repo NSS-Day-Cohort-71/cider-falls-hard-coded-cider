@@ -9,14 +9,18 @@ const services = getServices();
 // create function that returns an HTML string of the services
 export const bannerServices = () => {
   let html = "Park Services: ";
+  let serviceArray = [];
 
   for (const service of services) {
-    html += `
+    serviceArray.push(`
     <span data-type="service" data-id=${service.id} data-name=${service.name}>
-    , ${service.name}
+    ${service.name}
     </span>
-    `;
+    `);
   }
+
+  const serviceList = serviceArray.join();
+  html += serviceList;
 
   return html;
 };
