@@ -12,11 +12,9 @@ export const bannerServices = () => {
   let serviceArray = [];
 
   for (const service of services) {
-    serviceArray.push(`
-    <span data-type="service" data-id=${service.id} data-name=${service.name}>
-    ${service.name}
-    </span>
-    `);
+    serviceArray.push(
+      `<span data-type="service" data-id=${service.id} data-name=${service.name}> ${service.name}</span>`
+    );
   }
 
   const serviceList = serviceArray.join();
