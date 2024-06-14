@@ -1,11 +1,9 @@
-// import the getFunctions from Database
 import {
   getAreas,
   getParkAreaServices,
   getServices,
   getGuests,
 } from "./database.js";
-// reminder for later: click events -- not now
 
 // invoke getFunctions
 const areas = getAreas();
@@ -13,7 +11,7 @@ const allServices = getServices();
 const parkAreaServices = getParkAreaServices();
 const guests = getGuests();
 
-// create a function to find services for a specific area
+// function to find services for a specific area
 export const findAreaServices = (area, parkAreaServices, allServices) => {
   let serviceIds = [];
   let currentServices = [];
@@ -35,11 +33,10 @@ export const findAreaServices = (area, parkAreaServices, allServices) => {
   return currentServices;
 };
 
-// create an export function for creating AreaHTML
+// function for creating AreaHTML
 export const AreaHTML = () => {
   let AreaHTML = "<article>";
 
-  // iterate through the array of areas
   for (const area of areas) {
     const services = findAreaServices(area, parkAreaServices, allServices);
 
@@ -52,7 +49,6 @@ export const AreaHTML = () => {
   }
 
   AreaHTML += "</article>";
-  // return html
   return AreaHTML;
 };
 
