@@ -1,14 +1,18 @@
-// import the getFunctions from Database
-import { getAreas, getParkAreaServices, getServices } from "./database.js";
-// reminder for later: click events -- not now
+import {
+  getAreas,
+  getParkAreaServices,
+  getServices,
+  getGuests,
+} from "./database.js";
 
 // invoke getFunctions
 const areas = getAreas();
 const allServices = getServices();
 const parkAreaServices = getParkAreaServices();
+const guests = getGuests();
 
-// create a function to find services for a specific area
-const findAreaServices = (area, parkAreaServices, allServices) => {
+// function to find services for a specific area
+export const findAreaServices = (area, parkAreaServices, allServices) => {
   let serviceIds = [];
   let currentServices = [];
 
@@ -29,17 +33,16 @@ const findAreaServices = (area, parkAreaServices, allServices) => {
   return currentServices;
 };
 
-// create an export function for creating AreaHTML
+// function for creating AreaHTML
 export const AreaHTML = () => {
   let AreaHTML = "";
-  
-  // iterate through the array of areas
+
   for (const area of areas) {
     const services = findAreaServices(area, parkAreaServices, allServices);
 
     AreaHTML += `
     <section class="area-card">
-      <h2 class="area-header">${area.name}</h2>
+      <h2 data-type="area-title" data-area-id="${area.id}">${area.name}</h2>
       <div class="services-offered">
         ${services.map((service) => `<p>${service}</p>`).join("")}
       </div>
@@ -47,7 +50,19 @@ export const AreaHTML = () => {
     `;
   }
 
-  // AreaHTML += "</article>";
-  // return html
   return AreaHTML;
 };
+
+document.addEventListener("click", (e) => {
+  const clicked = e.target;
+  if (clicked.dataset.type === "area-title") {
+    const areaId = parseInt(clicked.dataset.areaId);
+    let guestCount = 0;
+    for (const guest of guests) {
+      if (guest.parkAreaId === areaId) {
+        guestCount++;
+      }
+    }
+    alert(`There are ${guestCount} guests at this area`);
+  }
+});
