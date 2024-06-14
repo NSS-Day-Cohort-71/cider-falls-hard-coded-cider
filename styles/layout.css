@@ -2,9 +2,27 @@ body {
     margin: 0;
 }
 
+header {
+    display: flex;
+}
+
+h1 {
+    padding: 0 20px;
+}
+
+header img {
+    max-width: 80px;
+}
+
 main {
     display: flex;
     border: 1px dotted rgb(244, 197, 80);
+}
+
+#main-container {
+    display: flex;
+    justify-content: start;
+    box-sizing: border-box;
 }
 
 /* .left-justified-area {
@@ -12,6 +30,42 @@ main {
     flex-direction: column;
     border: 1px dotted rgb(red);
 } */
- #guest-list {
-    
+.left-justified-area {
+    border: 1px solid darkblue;
+    box-sizing: border-box;
+}
+
+#park-services-banner {
+    width: 600px;
+    padding: 30px;
+    border: 1px solid orange;
+    box-sizing: border-box;
+}
+
+#guest-list
+
+#guest-list h2 {
+    padding: 0;
+    margin: auto;
+}
+
+#guest-list li {
+    list-style-type: none;
+    padding: 4px;
+    border: 1px dotted yellow;
+ }
+
+ #park-area-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: space-between;
+    border: 2px solid white;
+ }
+
+ .area-card {
+    width: 180px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid red;
  }

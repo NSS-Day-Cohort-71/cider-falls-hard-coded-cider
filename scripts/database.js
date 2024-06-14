@@ -52,9 +52,9 @@ export const database = {
     { id: 50, firstName: "Vera", lastName: "Edwards", parkAreaId: 2 },
   ],
   areas: [
-    { id: 1, name: "Chamfort River" },
+    { id: 1, name: "Lodge" },
     { id: 2, name: "Lost Wolf Hiking Trail" },
-    { id: 3, name: "Lodge" },
+    { id: 3, name: "Chamfort River" },
     { id: 4, name: "Gander River" },
     { id: 5, name: "Campgrounds" },
     { id: 6, name: "Pine Bluff Trails" },
