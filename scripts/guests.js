@@ -4,8 +4,12 @@ const guests = getGuests();
 
 // function for creating guestsHTML to be invoked in main.js
 export const Guests = () => {
-  let guestsHTML = `<ul>`;
 
+    let guestsHTML = `
+    <h2>Guests</h2>
+    <ul>
+    `
+    
   for (const guest of guests) {
     guestsHTML += `<li
                 data-type="guest"
