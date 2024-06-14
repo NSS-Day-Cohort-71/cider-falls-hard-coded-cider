@@ -1,12 +1,17 @@
 body {
-
+    margin: 0;
 }
 
 main {
     display: flex;
+    border: 1px dotted rgb(244, 197, 80);
 }
 
-.left-justified-area {
+/* .left-justified-area {
     display: flex;
     flex-direction: column;
-}
+    border: 1px dotted rgb(red);
+} */
+ #guest-list {
+    
+ }
