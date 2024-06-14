@@ -1,0 +1,60 @@
+title Cider Falls Park
+
+entryspacing 1.0
+participant Main
+participant Areas
+participant Services
+
+
+participant Guests
+participant Database
+
+
+Main->Areas:Requests AreaHTML()  
+
+Areas->Database:Requests Database Information
+
+Database-->Areas:Returns Copied Database Information
+
+note over Areas:AreaHTML() invokes findAreaServices()
+
+loop 
+note over Areas: findAreaServices() returns all services available for a given area
+end
+
+loop
+note over Areas:AreaHTML() creates HTML template strings for each area card
+end
+
+Areas-->Main:Returns HTML from AreaHTML()
+
+note over Main:Invokes AreaHTML() & renders to DOM using .innerHTML proptery on the areaContainer
+
+Main->Services:Requests bannerServices() HTML
+
+Services->Database:Requests Database Information
+
+Database-->Services:Returns Copied Database Information
+
+loop
+note over Services:bannerServices() iterates through services and returns a string
+end
+
+
+Services-->Main:Returns HTML for bannerServices()
+
+note over Main:Invokes bannerServices() & renders to DOM using .innerHTML proptery on the serviceBannerContainer
+
+Main->Guests:Requests Guests() HTML
+
+Guests->Database:Requests Database Information
+
+Database-->Guests:Returns Copied Database Information
+
+loop
+note over Guests:Guests() iterates through guests and returns a string 
+end
+
+Guests-->Main:Returns Guests() HTML
+
+note over Main:Invokes Guests() & renders to DOM using .innerHTML proptery on the guestContainer
