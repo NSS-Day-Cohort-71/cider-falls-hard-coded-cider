@@ -1,12 +1,10 @@
-// import the getServices from Database
 import { getAreas, getParkAreaServices, getServices } from "./database.js";
 import { findAreaServices } from "./areas.js";
 
 const areas = getAreas();
-const parkAreaServices = getParkAreaServices();
 const services = getServices();
 
-// create click event listener for the bannerServicesContainer
+// click event listener for the bannerServicesContainer
 document.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.dataset.type === "banner-service") {
     const clickedName = clickEvent.target.dataset.name;
@@ -31,7 +29,7 @@ document.addEventListener("click", (clickEvent) => {
   }
 });
 
-// create function that returns an HTML string of the services
+// function that returns an HTML string of the services to be invoked in main.js
 export const bannerServices = () => {
   let html = "Park Services: ";
   let serviceArray = [];
@@ -48,7 +46,7 @@ export const bannerServices = () => {
   return html;
 };
 
-// create an export function for creating servicesHTML
+// function for creating servicesHTML to be invoked in area.js
 export const Services = () => {
   let html = `<article class="services">`;
 

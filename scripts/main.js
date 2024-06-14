@@ -1,5 +1,5 @@
 import { AreaHTML } from "./areas.js";
-import { bannerServices, Services } from "./services.js";
+import { bannerServices } from "./services.js";
 import { Guests } from "./guests.js";
 
 const areasContainer = document.querySelector("#park-area-cards");
