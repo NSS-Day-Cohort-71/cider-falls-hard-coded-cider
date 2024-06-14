@@ -14,7 +14,7 @@ const parkAreaServices = getParkAreaServices();
 const guests = getGuests();
 
 // create a function to find services for a specific area
-const findAreaServices = (area, parkAreaServices, allServices) => {
+export const findAreaServices = (area, parkAreaServices, allServices) => {
   let serviceIds = [];
   let currentServices = [];
 
