@@ -38,7 +38,7 @@ export const bannerServices = () => {
 
   for (const service of services) {
     serviceArray.push(
-      `<span data-type="banner-service" data-id=${service.id} data-name=${service.name}> ${service.name}</span>`
+      `<span data-type="banner-service" data-id="${service.id}" data-name="${service.name}"> ${service.name}</span>`
     );
   }
 
