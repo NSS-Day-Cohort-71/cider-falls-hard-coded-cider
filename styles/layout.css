@@ -5,8 +5,7 @@ box-sizing: border-box;
 body {
     margin: 5px;
     background-color: #c4e8e5;
-    /* background-color: #c4e8e5; */
-    
+    height: 100vh;
 }
 
 header {
@@ -26,23 +25,22 @@ header img {
 
 main {
     display: flex;
-    /* border: 1px dotted rgb(244, 197, 80); */
 }
 
 #main-container {
     display: flex;
     justify-content: start;
     box-sizing: border-box;
-    gap: 20px;
     background-color: #c4e8e5;
-    /* background-color: #42aff8; */
+}
 
-
+aside {
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 
 .left-justified-area {
-    /* border: 1px solid darkblue; */
     box-sizing: border-box;
 }
 
@@ -50,9 +48,7 @@ main {
     width: 906px;
     padding: 30px;
     background-color: #428142;
-    /* background-color:#255025; */
     color: #c4e8e5;
-    /* border: 1px solid orange; */
     box-sizing: border-box;
     font-size: 18px;
     text-align: center;
@@ -61,6 +57,7 @@ main {
 
 #guest-list {
     background-color: #c4e8e5;
+    height: 660px;
 }
 
 #guest-list ul {
@@ -74,7 +71,6 @@ main {
 #guest-list li {
     list-style-type: none;
     padding: 4px;
-    /* border: 1px dotted yellow; */
  }
 
  #park-area-cards {
@@ -93,12 +89,7 @@ main {
     max-width: 400px;
     height: 270px;
     text-align: center;
-    /* border: 1px solid red; */
     background-color: #428142;
-    /* border: 1px solid #255125; */
-    /* border: 1px solid #255125; */
-    /* box-shadow: 0 2px 4px #255025; */
-
  }
 
 .area-card h2 {
@@ -110,32 +101,22 @@ main {
     margin-top: 0;
     color: #c4e8e5;
     background-color: rgb(37, 80, 37);
-    
+}
+
+.area-card h2:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    font-size: 24px;
 }
 
 .services-offered {
-    /* background-color: #1e3f1e; */
     background-color: #428142;
     display: flex;
     flex-direction: column;
-    
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-}
-
-.services-offered p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .area-card p {
     color: #c4e8e5;
-    /* color: #b6ceb6; */
-    /* background-color: #1e3f1e; */
-    /* border: 1px solid #255125; */
     margin: 0px;
     padding: 15px 0;
     font-weight: bold;
@@ -146,17 +127,14 @@ main {
     letter-spacing: 2px;
 }
 
+.area-card p:hover {
+    transform: translateY(5px);
+    cursor: pointer;
+    background-color:#2f662f;
+}
+
 .area-header {
     background-color: #2f662f;
     margin: 0;
     border: 2px solid #255125;
-    /* border-radius: 2px; */
 }
-
-
-
-/* footer {
-    color: rgb(220, 217, 217);
-    background-color: rgb(59, 59, 178);
-    text-align: center;
-} */

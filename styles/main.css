@@ -10,7 +10,6 @@ textarea {
 	font-family: "Comfortaa", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
-	/* background-color: #42aff8; */
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -21,9 +20,10 @@ h1,h2,h3,h4,h5,h6 {
 footer {
   color: white;
   display: flex;
-  height: 200px;
+  height: 150px;
   justify-content: center;
   align-items: center;
   color: rgb(220, 217, 217);
   background-color: #255125;
+  margin-top: 5px;
 }
