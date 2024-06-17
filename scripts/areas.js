@@ -42,8 +42,8 @@ export const AreaHTML = () => {
     const services = findAreaServices(area, parkAreaServices, allServices);
 
     AreaHTML += `
-    <section class="area-card">
-      <h2 class="area-header">${area.name}</h2>
+    <section class="area-card" >
+      <h2 class="area-header" data-type="area-title" data-area-id=${area.id}>${area.name}</h2>
       <div class="services-offered">
         ${services.map((service) => `<p>${service}</p>`).join("")}
       </div>
