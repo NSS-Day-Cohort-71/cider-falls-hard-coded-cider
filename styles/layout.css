@@ -29,7 +29,7 @@ main {
 
 #main-container {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     box-sizing: border-box;
     background-color: #c4e8e5;
 }
