@@ -36,20 +36,24 @@ export const findAreaServices = (area, parkAreaServices, allServices) => {
 // function for creating AreaHTML
 export const AreaHTML = () => {
   let AreaHTML = "";
-
+  
+  // iterate through the array of areas
   for (const area of areas) {
     const services = findAreaServices(area, parkAreaServices, allServices);
 
     AreaHTML += `
-    <section class="area-card">
-      <h2 data-type="area-title" data-area-id="${area.id}">${area.name}</h2>
+    <section class="area-card" >
+      <h2 class="area-header" data-type="area-title" data-area-id=${area.id}>${area.name}</h2>
       <div class="services-offered">
         ${services.map((service) => `<p>${service}</p>`).join("")}
       </div>
     </section>
+    </section>
     `;
   }
 
+  // AreaHTML += "</article>";
+  // return html
   return AreaHTML;
 };
 
